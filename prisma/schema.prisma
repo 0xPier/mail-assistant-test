@@ -1,0 +1,109 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum EmailJobStatus {
+  QUEUED
+  SENDING
+  SENT
+  FAILED
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  company   String?
+  phone     String?
+  locale    String   @default("en")
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  emailJobs EmailJob[]
+}
+
+model FileAsset {
+  id          String    @id @default(cuid())
+  filename    String
+  url         String
+  contentType String
+  sizeBytes   Int
+  checksum    String?
+  createdAt   DateTime  @default(now())
+
+  templates   TemplateAttachment[]
+  emailJobs   EmailJobAttachment[]
+}
+
+model Template {
+  id               String                @id @default(cuid())
+  name             String
+  description      String?
+  contextByLocale  Json
+  promptExamples   Json
+  defaultLanguage  String                @default("en")
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
+
+  attachments      TemplateAttachment[]
+  emailJobs        EmailJob[]
+}
+
+model TemplateAttachment {
+  template   Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  templateId String
+  file       FileAsset @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  fileId     String
+
+  @@id([templateId, fileId])
+}
+
+model EmailJob {
+  id             String          @id @default(cuid())
+  contact        Contact         @relation(fields: [contactId], references: [id], onDelete: Cascade)
+  contactId      String
+  template       Template?       @relation(fields: [templateId], references: [id])
+  templateId     String?
+  subject        String
+  body           String
+  language       String          @default("en")
+  status         EmailJobStatus  @default(QUEUED)
+  scheduledAt    DateTime?
+  sentAt         DateTime?
+  providerJobId  String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  attachments    EmailJobAttachment[]
+}
+
+model EmailJobAttachment {
+  emailJob   EmailJob  @relation(fields: [emailJobId], references: [id], onDelete: Cascade)
+  emailJobId String
+  file       FileAsset @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  fileId     String
+
+  @@id([emailJobId, fileId])
+}
+
+model LeadFormSubmission {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  company     String?
+  phone       String?
+  locale      String    @default("en")
+  notes       String?
+  source      String?
+  followUpVia String?   // manual, automated, template id, etc.
+  createdAt   DateTime  @default(now())
+
+  contact     Contact? @relation(fields: [contactId], references: [id])
+  contactId   String?
+}

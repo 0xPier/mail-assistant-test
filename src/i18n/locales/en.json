@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "dashboard": "Overview",
+    "contacts": "Contacts",
+    "files": "File Library",
+    "templates": "Templates",
+    "compose": "Compose",
+    "intake": "New Client Intake",
+    "settings": "Settings"
+  },
+  "home": {
+    "title": "Mail Assistant Control Center",
+    "hero": "Manage contacts, reusable files, templates, and AI-assisted outreach in one multilingual workspace.",
+    "cta": "Choose a section from the navigation to begin."
+  },
+  "contacts": {
+    "title": "Contact Management",
+    "description": "Create, edit, or import contacts. Bulk import supports CSV files with name, email, company, and phone columns."
+  },
+  "files": {
+    "title": "File Library",
+    "description": "Upload up to ten reusable files and attach them to templates or outbound emails."
+  },
+  "templates": {
+    "title": "Email Templates",
+    "description": "Define reusable scenarios with localized context, sample prompts, and default attachments."
+  },
+  "compose": {
+    "title": "Compose Emails",
+    "description": "Draft personalized single or multi-send messages. Claude AI generates localized subject lines and email bodies."
+  },
+  "intake": {
+    "title": "New Client Intake Form",
+    "description": "Capture leads from events or the web, trigger automatic follow-ups, and assign manual tasks."
+  },
+  "settings": {
+    "title": "Workspace Settings",
+    "description": "Configure AI provider keys, mail provider credentials, localization preferences, and integrations."
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}

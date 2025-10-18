@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "dashboard": "Panoramica",
+    "contacts": "Contatti",
+    "files": "Libreria File",
+    "templates": "Modelli",
+    "compose": "Componi",
+    "intake": "Modulo Nuovi Clienti",
+    "settings": "Impostazioni"
+  },
+  "home": {
+    "title": "Centro di Controllo Mail Assistant",
+    "hero": "Gestisci contatti, file riutilizzabili, modelli e campagne email assistite da AI in uno spazio di lavoro multilingue.",
+    "cta": "Scegli una sezione dal menu di navigazione per iniziare."
+  },
+  "contacts": {
+    "title": "Gestione Contatti",
+    "description": "Crea, modifica o importa contatti. L'importazione massiva supporta file CSV con colonne nome, email, azienda e telefono."
+  },
+  "files": {
+    "title": "Libreria File",
+    "description": "Carica fino a dieci file riutilizzabili e allegali a modelli o email in uscita."
+  },
+  "templates": {
+    "title": "Modelli di Email",
+    "description": "Definisci scenari riutilizzabili con contesto localizzato, prompt di esempio e allegati predefiniti."
+  },
+  "compose": {
+    "title": "Componi Email",
+    "description": "Redigi messaggi personalizzati singoli o in serie. Claude AI genera oggetto e corpo del messaggio nella lingua selezionata."
+  },
+  "intake": {
+    "title": "Modulo Nuovi Clienti",
+    "description": "Raccogli lead da eventi o dal web, attiva follow-up automatici e assegna attività manuali."
+  },
+  "settings": {
+    "title": "Impostazioni Workspace",
+    "description": "Configura le chiavi dell'AI, le credenziali del fornitore email, le preferenze di localizzazione e le integrazioni."
+  },
+  "languageSwitcher": {
+    "label": "Lingua"
+  }
+}

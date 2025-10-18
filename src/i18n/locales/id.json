@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "dashboard": "Ringkasan",
+    "contacts": "Kontak",
+    "files": "Pustaka Berkas",
+    "templates": "Templat",
+    "compose": "Tulis Email",
+    "intake": "Formulir Klien Baru",
+    "settings": "Pengaturan"
+  },
+  "home": {
+    "title": "Pusat Kontrol Mail Assistant",
+    "hero": "Kelola kontak, berkas, templat, dan kampanye email dengan bantuan AI dalam satu ruang kerja multibahasa.",
+    "cta": "Pilih salah satu menu di navigasi untuk memulai."
+  },
+  "contacts": {
+    "title": "Manajemen Kontak",
+    "description": "Buat, ubah, atau impor kontak. Impor massal mendukung CSV dengan kolom nama, email, perusahaan, dan telepon."
+  },
+  "files": {
+    "title": "Pustaka Berkas",
+    "description": "Unggah hingga sepuluh berkas yang dapat digunakan kembali dan lampirkan pada templat atau email keluar."
+  },
+  "templates": {
+    "title": "Templat Email",
+    "description": "Siapkan skenario yang dapat digunakan kembali dengan konteks lokal, contoh prompt, dan lampiran default."
+  },
+  "compose": {
+    "title": "Tulis Email",
+    "description": "Susun pesan personal untuk satu atau banyak penerima. Claude AI membuat subjek dan isi email dalam bahasa pilihan."
+  },
+  "intake": {
+    "title": "Formulir Klien Baru",
+    "description": "Tangkap prospek dari acara atau situs web, jalankan tindak lanjut otomatis, dan tugaskan pekerjaan manual."
+  },
+  "settings": {
+    "title": "Pengaturan Ruang Kerja",
+    "description": "Atur kunci penyedia AI, kredensial penyedia email, preferensi bahasa, dan integrasi."
+  },
+  "languageSwitcher": {
+    "label": "Bahasa"
+  }
+}
