@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(cat node_modules/next-intl/package.json)",
+      "Bash(cat node_modules/next-intl/dist/types/navigation.react-client.d.ts)",
+      "Bash(cat \"node_modules/next-intl/dist/types/navigation/react-client/index.d.ts\")",
+      "Bash(cat \"node_modules/next-intl/dist/types/navigation/react-client/createNavigation.d.ts\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

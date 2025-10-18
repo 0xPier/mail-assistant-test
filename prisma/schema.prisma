@@ -25,7 +25,8 @@ model Contact {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  emailJobs EmailJob[]
+  emailJobs           EmailJob[]
+  leadFormSubmissions LeadFormSubmission[]
 }
 
 model FileAsset {

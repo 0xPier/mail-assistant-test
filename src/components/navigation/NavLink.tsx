@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next-intl/link";
+import { Link } from "next-intl/navigation";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 
